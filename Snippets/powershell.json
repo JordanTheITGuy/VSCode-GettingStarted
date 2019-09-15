@@ -2,7 +2,7 @@
 	"Logging":{
 		"prefix": "log",
 		"body": [
-			"Get-Date + \"---INFO---YourMessageHere\"|out-file ($PSScriptRoot + '\\'+ ($MyInvocation.MyCommand.Name).split('.')[0] + '.log')"
+			"Get-Date + \"---INFO---YourMessageHere\"|out-file ($PSScriptRoot + '\\\\'+ ($MyInvocation.MyCommand.Name).split('.')[0] + '.log')"
 		],
 		"description": "Logs to a file of the same name as the script"
 	}
