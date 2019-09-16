@@ -5,5 +5,77 @@
 			"Get-Date + \"---INFO---YourMessageHere\"|out-file ($PSScriptRoot + '\\\\'+ ($MyInvocation.MyCommand.Name).split('.')[0] + '.log')"
 		],
 		"description": "Logs to a file of the same name as the script"
-	}
+	},
+	
+	"NewPSFile" : {
+		"prefix": "psnewscript",
+		"body": [
+			"<#",
+			".SYNOPSIS",
+			"",
+			".DESCRIPTION",
+			"",
+			".LINK",
+			"",
+			".NOTES",
+			"          FileName: $TM_FILENAME",
+			"          Author: Jordan Benzing",
+			"          Contact: @JordanTheItGuy",
+			"          Created: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"          Modified: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"",
+			"          Version - 0.0.0 - ($CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE)",
+			"",
+			"",
+			"          TODO:",
+			"               [ ] Script Main Goal",
+			"               [ ] Script Secondary Goal",
+			"",
+			".EXAMPLE",
+			"",
+			"#>",
+			"",
+			"[cmdletbinding()]",
+			"param()",
+			"begin{}",
+			"process{}"
+		],	
+	},
+	
+	"StringParamater" : {
+		"prefix": "newparam",
+		"description": "Creates a parameter for strings",
+		"body": [
+			"[Parameter(HelpMessage = )]",
+			"[string]$ParameterName",
+		],
+	},
+
+	"IntParameter" : {
+		"prefix": "newparam",
+		"description": "Creates a parameter for Integers",
+		"body": [
+			"[Parameter(HelpMessage = )]",
+			"[Int32]$ParameterName",
+		],
+	},
+
+	"BoolParameter" : {
+		"prefix": "newparam",
+		"description": "Creates a parameter for booleans",
+		"body": [
+			"[Parameter(HelpMessage = )]",
+			"[bool]$ParameterName",
+		],
+	},
+
+	"SwitchParamater" : {
+		"prefix": "newparam",
+		"description": "Creates a parameter for switches",
+		"body": [
+			"[Parameter(HelpMessage = )]",
+			"[switch]$ParameterName",
+		],
+	},
 }
+
