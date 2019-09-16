@@ -6,9 +6,10 @@
 		],
 		"description": "Logs to a file of the same name as the script"
 	},
-	
+
 	"NewPSFile" : {
 		"prefix": "psnewscript",
+		"description": "Creates a new header for a script",
 		"body": [
 			"<#",
 			".SYNOPSIS",
@@ -78,4 +79,3 @@
 		],
 	},
 }
-
