@@ -1,0 +1,10 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "team.showWelcomeMessage": false,
+    "markdown.extension.toc.githubCompatibility": true,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "[powershell]": {
+        "editor.tabSize": 8
+    }
+}

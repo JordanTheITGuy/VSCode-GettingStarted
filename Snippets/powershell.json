@@ -40,7 +40,8 @@
 			"param()",
 			"begin{}",
 			"process{}"
-		],	
+		]
+		
 	},
 	
 	"StringParamater" : {
@@ -48,8 +49,8 @@
 		"description": "Creates a parameter for strings",
 		"body": [
 			"[Parameter(HelpMessage = )]",
-			"[string]$ParameterName",
-		],
+			"[string]$ParameterName"
+		]
 	},
 
 	"IntParameter" : {
@@ -57,8 +58,8 @@
 		"description": "Creates a parameter for Integers",
 		"body": [
 			"[Parameter(HelpMessage = )]",
-			"[Int32]$ParameterName",
-		],
+			"[Int32]$ParameterName"
+		]
 	},
 
 	"BoolParameter" : {
@@ -66,8 +67,8 @@
 		"description": "Creates a parameter for booleans",
 		"body": [
 			"[Parameter(HelpMessage = )]",
-			"[bool]$ParameterName",
-		],
+			"[bool]$ParameterName"
+		]
 	},
 
 	"SwitchParamater" : {
@@ -75,7 +76,44 @@
 		"description": "Creates a parameter for switches",
 		"body": [
 			"[Parameter(HelpMessage = )]",
-			"[switch]$ParameterName",
-		],
+			"[switch]$ParameterName"
+		]
 	},
+	"Function advanced": {
+        "prefix": "funcadv",
+        "body": [
+            "<#",
+            ".SYNOPSIS",
+            "\tShort description",
+            ".DESCRIPTION",
+            "\tLong description",
+            ".EXAMPLE",
+            "\tExample of how to use this function",
+            ".EXAMPLE",
+            "\tAnother example of how to use this function",
+            "#>",
+            "function ${verb}-${noun} {",
+            "\t[CmdletBinding()]",
+            "\t[OutputType([${int}])]",
+            "\tparam(",
+			"\t\t[Parameter(Mandatory=$true,",
+			"\t\tValueFromPipeline=$true)]",
+			"\t\t[ValidateNotNullOrEmpty()]",
+            "\t\t[${string}]",
+            "\t\t${Param1}",
+            "\t)",
+            "\t",
+            "\tbegin {",
+            "\t}",
+            "\t",
+            "\tprocess {",
+            "\t\t$0",
+            "\t}",
+            "\t",
+            "\tend {",
+            "\t}",
+            "}"
+        ],
+        "description": "Advanced function"
+    }
 }

@@ -21,3 +21,7 @@ Helpful features and shortcuts that enhance the VSCode experience
 - Fast Scroll  - Alt Scroll
 - Select whole section - Shift-Alt right arrow
 - Copy line - Shift-Alt Up/down arrow
+- List installed extensions - code --list-extensions
+-  - and install them on another system:
+   -  $cmd = "code "
+   -  code --list-extensions|%{$cmd = $cmd + "--install-extension $_ "}
