@@ -5,6 +5,6 @@
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "[powershell]": {
-        "editor.tabSize": 8
+        "editor.tabSize": 10
     }
 }
